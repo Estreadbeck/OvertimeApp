@@ -1,0 +1,2 @@
+$('#pending-approvals').html('<%= escape_javascript render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>');
+$('#paginator').html('<%= escape_javascript(paginate(@pending_approvals, remote: true).to_s) %>');
