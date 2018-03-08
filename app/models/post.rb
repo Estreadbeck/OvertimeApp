@@ -7,6 +7,8 @@ class Post < ActiveRecord::Base
 
   scope :posts_by, ->(user) { where(user_id: user.id) }
 
+ after_save :update_audit_log
+  
   private
 
     def update_audit_log

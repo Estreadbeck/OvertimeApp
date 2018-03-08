@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :audit_logs, except: [:new, :edit, :destory] do
+  resources :audit_logs, except: [:new, :edit, :destory, :confirm] do
     member do
       get :confirm
     end
